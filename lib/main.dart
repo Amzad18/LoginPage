@@ -10,28 +10,43 @@ class Myapp extends StatelessWidget {
     return MaterialApp (
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        
         body: SafeArea(
           child: Center(
             child: Column(
               children: [
-
-                Container(
                   
-                  margin: EdgeInsets.only(top: 100),
+                Container(
+                  margin: EdgeInsets.only(top: 50),
                   padding: EdgeInsets.only(top: 10,bottom: 10,right: 10,left: 10),
                   child: Column(
                     children: [
-                      Text("Welcome Back!",
-                      style: TextStyle(fontSize: 30),
                       
+                      Text("Welcome Back!",style: TextStyle(fontSize: 30,color: Colors.black),
+
                       ),
                     ],
                   ),
                 ),
+
+                Container(
+                  child: Column(
+                    children: [
+                      Text("We're so excited to see you again!")
+                    ],
+                  ),
+                ),
                 SizedBox(height: 50,),
+
+                Row(
+                  children: [
+                    Padding(padding: EdgeInsets.only(left: 11,top:30 )),
+                    Text("ACCOUNT INFORMATION")
+                  ],
+                ),
                 
                 Padding(
-                  padding: EdgeInsets.only(right: 10,left: 10),
+                  padding: EdgeInsets.only(left: 10,right: 10),
                   child: TextField(
                     obscureText: false,
                     decoration: InputDecoration(
@@ -47,7 +62,7 @@ class Myapp extends StatelessWidget {
                   ),
                 ),
 
-                Padding(
+                 Padding(
                   padding: EdgeInsets.only(top:10, right:10,left: 10),
                   child: TextField(
                     obscureText: true,
@@ -62,9 +77,26 @@ class Myapp extends StatelessWidget {
                     )
                     
                   ),
+                ),
+
+                Row(
+                  children: [
+                    Padding(padding: EdgeInsets.only(right: 9,top: 40),),
+
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(height: 10,),
+                        Text("Forgot your password?"),
+                        SizedBox(height:3,),
+                        Text("Use a password manager?")
+                      ],
+                    )
+                    
+                  ],
                 )
 
-
+                
               ],
             ),
           ),
