@@ -10,15 +10,15 @@ class Myapp extends StatelessWidget {
     return MaterialApp (
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        
+        resizeToAvoidBottomInset: false,
         body: SafeArea(
           child: Center(
             child: Column(
               children: [
-                  
-                Container(
-                  margin: EdgeInsets.only(top: 50),
-                  padding: EdgeInsets.only(top: 10,bottom: 10,right: 10,left: 10),
+                SizedBox(height: 50,),
+                
+                Center(
+
                   child: Column(
                     children: [
                       
@@ -29,7 +29,7 @@ class Myapp extends StatelessWidget {
                   ),
                 ),
 
-                Container(
+                Center(
                   child: Column(
                     children: [
                       Text("We're so excited to see you again!")
@@ -94,9 +94,7 @@ class Myapp extends StatelessWidget {
                     )
                     
                   ],
-                )
-
-                
+                ),
               ],
             ),
           ),
